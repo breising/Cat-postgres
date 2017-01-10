@@ -1,6 +1,6 @@
 ###Catalog App
 
-A basic catalog app built with Flask, sqlalchemy, sqlite. Dependencies can be found in the requirements.txt file. Dependencies can be installed via `pip install -r requirements.txt`. 
+A basic catalog app built with Flask, sqlalchemy, postgresDB. Dependencies can be found in the requirements.txt file. Dependencies can be installed via `pip install -r requirements.txt`. 
 
 ###Functionality
 Users can optionally create an account via Google+ signin to have access for creating items and categories. Unauthenticated users can still browse the catalog by selecting a category which then shows the items in that category. Clicking on an item will show details about that item. Authenticated users can create items with various data fields like, price, description, title, sku, image url etc. Authenticated users can also create new categories. Users can edit the items and categories that they create. 
