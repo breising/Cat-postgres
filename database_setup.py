@@ -57,7 +57,7 @@ class Item(Base):
         }
 # engine = create_engine('sqlite:///catalog.db')
 engine = create_engine(
-    'postgresql://postgres:bcr0072@localhost:5432/postgres')
+    'postgresql://www-data:bcr0072@localhost:5432/catalogdb')
 # below, 'metadata' and 'create_all' uses the python classes code above to
 # create the database it describes. So, you don't have to independently
 # create the db manually using SQL statements. Rather, it generates the
