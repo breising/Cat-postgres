@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # below, identify the db that you want to work with...
 engine = create_engine(
-    'postgresql://postgres:bcr0072@localhost:5432/postgres')
+    'postgresql://catalog:bcr0072@localhost:5432/catalog')
 # associate your engine with the session
 Session = sessionmaker(bind=engine)
 # create an instance of the Session to use in your code

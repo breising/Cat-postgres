@@ -4,7 +4,8 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import User, Base, Category, Item
 from flask import session as login_session
 
-engine = create_engine('postgresql://brian:bcr0072@localhost/catalogdb')
+engine = create_engine(
+    'postgresql://catalog:bcr0072@localhost:5432/catalog')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

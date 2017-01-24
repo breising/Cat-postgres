@@ -5,13 +5,7 @@ from database_setup import User, Base, Category, Item
 from flask import session as login_session
 from dbSession import session
 
-app = Flask(__name__)
-
-
-# engine = create_engine('sqlite:///catalog.db')
-# Base.metadata.bind = engine
-# DBSession = sessionmaker(bind=engine)
-# session = DBSession()
+#app = Flask(__name__)
 
 
 def add_item(category_name, category_id):

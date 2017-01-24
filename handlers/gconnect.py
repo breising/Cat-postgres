@@ -10,8 +10,9 @@ from functions import createUser, getUserID
 
 app = Flask(__name__)
 
+APP_PATH = '/var/www/html/'
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open(APP_PATH + 'client_secrets.json', 'r').read())['web']['client_id']
 
 
 @app.route('/gconnect', methods=['POST'])
@@ -28,7 +29,8 @@ def gconnect():
 
     try:
         # Get the client secret stored in the server root dir as a .json file
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(
+            APP_PATH + 'client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         # Upgrade the token into a credentials object
         credentials = oauth_flow.step2_exchange(code)
